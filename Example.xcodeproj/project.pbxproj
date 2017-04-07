@@ -10,6 +10,8 @@
 		5D3865A41E962BCF00CFEDD1 /* UserDetailViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3865A31E962BCF00CFEDD1 /* UserDetailViewController+TableView.swift */; };
 		5D3865A71E962DA400CFEDD1 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3865A51E962DA400CFEDD1 /* UserTableViewCell.swift */; };
 		5D3865A81E962DA400CFEDD1 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3865A61E962DA400CFEDD1 /* UserTableViewCell.xib */; };
+		5D3865AA1E96430600CFEDD1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3865A91E96430600CFEDD1 /* Location.swift */; };
+		5D3865AC1E9643E600CFEDD1 /* Location+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3865AB1E9643E600CFEDD1 /* Location+Network.swift */; };
 		5DB2FAC81E94FBE200B0A5CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB2FAC71E94FBE200B0A5CB /* AppDelegate.swift */; };
 		5DB2FACA1E94FBE200B0A5CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB2FAC91E94FBE200B0A5CB /* ViewController.swift */; };
 		5DB2FACD1E94FBE200B0A5CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB2FACB1E94FBE200B0A5CB /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 		5D3865A31E962BCF00CFEDD1 /* UserDetailViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDetailViewController+TableView.swift"; sourceTree = "<group>"; };
 		5D3865A51E962DA400CFEDD1 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		5D3865A61E962DA400CFEDD1 /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		5D3865A91E96430600CFEDD1 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		5D3865AB1E9643E600CFEDD1 /* Location+Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+Network.swift"; sourceTree = "<group>"; };
 		5DB2FAC41E94FBE200B0A5CB /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DB2FAC71E94FBE200B0A5CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DB2FAC91E94FBE200B0A5CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +238,7 @@
 			children = (
 				5DB2FB0F1E950CD600B0A5CB /* User.swift */,
 				5DB2FB111E950CEE00B0A5CB /* Name.swift */,
+				5D3865A91E96430600CFEDD1 /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 			children = (
 				5DB2FB141E950D4200B0A5CB /* User+Network.swift */,
 				5DB2FB161E950D6F00B0A5CB /* Name+Network.swift */,
+				5D3865AB1E9643E600CFEDD1 /* Location+Network.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -362,7 +368,9 @@
 				5DB2FAEB1E95015100B0A5CB /* UserListViewController.swift in Sources */,
 				5DB2FAED1E95030F00B0A5CB /* UserListViewController+TableView.swift in Sources */,
 				5DB2FAE91E95015100B0A5CB /* UserListPresenter.swift in Sources */,
+				5D3865AA1E96430600CFEDD1 /* Location.swift in Sources */,
 				5DB2FB171E950D6F00B0A5CB /* Name+Network.swift in Sources */,
+				5D3865AC1E9643E600CFEDD1 /* Location+Network.swift in Sources */,
 				5DB2FB1E1E950E5900B0A5CB /* SerializableUtils.swift in Sources */,
 				5DB2FAE71E95015100B0A5CB /* UserListInteractor.swift in Sources */,
 				5DB2FAEA1E95015100B0A5CB /* UserListRouter.swift in Sources */,

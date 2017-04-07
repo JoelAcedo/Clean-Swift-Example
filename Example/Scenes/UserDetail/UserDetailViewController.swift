@@ -26,7 +26,7 @@ class UserDetailViewController: UIViewController, UserDetailViewControllerInput 
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userDataTableView: UITableView!
     
-    var atributes: [UserDetailScene.GetUser.ViewModel.Atribute] = []
+    var sections: [UserDetailScene.GetUser.ViewModel.Section] = []
     
     // MARK: Object lifecycle
     
@@ -57,7 +57,8 @@ class UserDetailViewController: UIViewController, UserDetailViewControllerInput 
             self.userImage.kf.setImage(with: url)
         }
         
-        atributes = viewModel.atributes
+        sections = viewModel.sections
+        
         userDataTableView.reloadData()
     }
 

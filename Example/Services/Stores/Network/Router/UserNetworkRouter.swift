@@ -17,6 +17,7 @@ enum UserNetworkRouter:URLRequestConvertible {
     
     func asURLRequest() throws -> URLRequest {
         var request: URLRequest!
+        var parameters: [String: Any]? = nil
         
         switch self {
         case .getUser():
@@ -25,6 +26,6 @@ enum UserNetworkRouter:URLRequestConvertible {
             request.httpMethod = "GET"
         }
         
-        return try Alamofire.URLEncoding().encode(request, with: nil)
+        return try Alamofire.URLEncoding().encode(request, with: parameters)
     }
 }

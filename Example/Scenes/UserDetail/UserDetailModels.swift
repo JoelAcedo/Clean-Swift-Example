@@ -23,11 +23,16 @@ struct UserDetailScene {
         
         struct ViewModel {
             let imagePath: String
-            let atributes: [Atribute]
+            let sections: [Section]
             
             struct Atribute {
                 let title: String
                 let value: String
+            }
+            
+            struct Section {
+                let title: String
+                let atributes: [Atribute]
             }
         }
     }

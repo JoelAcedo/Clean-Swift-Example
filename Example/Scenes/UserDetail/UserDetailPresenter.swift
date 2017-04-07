@@ -33,15 +33,29 @@ class UserDetailPresenter: UserDetailPresenterInput {
     func mapUserToViewModel(user: User) -> UserDetailScene.GetUser.ViewModel {
         
         let userNameData = user.name
+        let userLocationData = user.location
+        
         let userName = userNameData.title.capitalized + ". " + userNameData.firstName.capitalized + " " + userNameData.lastName.capitalized
         
         let nameAtribute = UserDetailScene.GetUser.ViewModel.Atribute(title: "Name: ", value: userName)
+        let genderAtribute = UserDetailScene.GetUser.ViewModel.Atribute(title: "Gender: ", value: user.gender.capitalized)
         let emailAtribute = UserDetailScene.GetUser.ViewModel.Atribute(title: "Email: ", value: user.email)
+        let phoneAtribute = UserDetailScene.GetUser.ViewModel.Atribute(title: "Phone: ", value: user.phone)
         let mobileAtribute = UserDetailScene.GetUser.ViewModel.Atribute(title: "Mobile: ", value: user.mobile)
         
-        let atributes = [nameAtribute, emailAtribute, mobileAtribute]
+        let streetAtribute = UserDetailScene.GetUser.ViewModel.Atribute(title: "Street: ", value: userLocationData.state.capitalized)
+        let cityAtribute = UserDetailScene.GetUser.ViewModel.Atribute(title: "City; ", value: userLocationData.city.capitalized)
+        let stateAtribute = UserDetailScene.GetUser.ViewModel.Atribute(title: "State: ", value: userLocationData.state.capitalized)
         
-        return UserDetailScene.GetUser.ViewModel(imagePath: user.imagePath, atributes: atributes)
+        let basicAtributes = [nameAtribute, genderAtribute, emailAtribute, phoneAtribute, mobileAtribute]
+        let locationAtributes = [streetAtribute, cityAtribute, stateAtribute]
+        
+        let firstSection = UserDetailScene.GetUser.ViewModel.Section(title: "Basic ", atributes: basicAtributes)
+        let secondSection = UserDetailScene.GetUser.ViewModel.Section(title: "Location ", atributes: locationAtributes)
+        
+        let sections = [firstSection, secondSection]
+        
+        return UserDetailScene.GetUser.ViewModel(imagePath: user.imagePath, sections: sections)
     }
     
 }

@@ -12,17 +12,19 @@ import Kingfisher
 extension UserDetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return sections.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return atributes.count
+        return sections[section].atributes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let atributeCell = tableView.dequeueReusableCell(withIdentifier: "AtributeCell") {
-            atributeCell.textLabel?.text = atributes[indexPath.row].title
-            atributeCell.detailTextLabel?.text = atributes[indexPath.row].value
+            let section = sections[indexPath.section]
+            let attribute = section.atributes[indexPath.row]
+            atributeCell.textLabel?.text = attribute.title
+            atributeCell.detailTextLabel?.text = attribute.value
             
             return atributeCell
         }
@@ -30,4 +32,7 @@ extension UserDetailViewController: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section].title
+    }
 }
