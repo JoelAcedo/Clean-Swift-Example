@@ -55,10 +55,10 @@ class UserListRouter: UserListRouterInput {
         }
         
         switch segueIdentifier {
-        case SegueIdentifiers.userDetail:
-            passDataToUserDetailScene(for: segue)
-        default:
-            return
+            case SegueIdentifiers.userDetail:
+                passDataToUserDetailScene(for: segue)
+            default:
+                return
         }
     }
     

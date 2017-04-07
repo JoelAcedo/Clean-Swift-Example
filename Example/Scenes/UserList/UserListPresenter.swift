@@ -26,12 +26,12 @@ class UserListPresenter: UserListPresenterInput {
     {
         // NOTE: Format the response from the Interactor and pass the result back to the View Controller
         
-        let newUser = response.newUser
+        let user = response.newUser
         
-        let userNameData = newUser.name
+        let userNameData = user.name
         let userName = userNameData.title.capitalized + ". " + userNameData.firstName.capitalized + " " + userNameData.lastName.capitalized
         
-        let userViewModel = UserListScene.GetUser.ViewModel.User(name: userName, email: newUser.email, imagePath: newUser.thumbImagePath)
+        let userViewModel = UserListScene.GetUser.ViewModel.User(name: userName, email: user.email, imagePath: user.thumbImagePath)
         
         let viewModel = UserListScene.GetUser.ViewModel(user: userViewModel)
         
